@@ -1,0 +1,30 @@
+{
+  "weather_api":[
+    {
+      "location": "Exeter",
+      "api-key": "5fb120a0e15b2367087ff5996f7e4f8e"
+    }
+    ]
+  ,"news_api":[
+      {
+        "location": "uk",
+        "api-key": "51aac71be7de43e09190fd0a80d227da"
+      }
+      ]
+  ,"pyttsx3":[
+      {
+        "volume": "1000",
+        "speed": "2"
+      }
+      ]
+   ,"Event_database":[
+      {
+        "location": "Event_database.txt"
+      }
+      ]
+    ,"Event_log":[
+          {
+            "location": "Event_log.txt"
+          }
+      ]
+}

@@ -1,0 +1,85 @@
+<html lang="en">
+    <head>
+        <meta http-equiv="refresh" content=20>
+        <style>
+            body{
+                    background-size: 100% 100%;
+                    background-repeat: no-repeat;
+                }
+        </style>
+    </head>
+        <body class="text-center">
+            <title>Smart Alarm</title>
+            <link rel="canonical" href="https://getbootstrap.com/docs/4.0/examples/sign-in/">
+            <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+            <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+            <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+            <div class="row">
+                <!-- ALARMS COLUMN -->
+                <div class="col-sm">
+                    <div>
+                        <h3>Upcoming alarms:</h3>
+                    </div>
+                    <table class="table table-hover">
+                                <td>Event name</td>
+                                <td>Event time</td>
+                                <td>Event description</td>
+                                <td>Repeat every day?</td>
+                                <td></td>
+                        {% for x in range(Events_list|length) %}
+                            <tr>
+                                <td>{{Events_list[x][0]}}</td>
+                                <td>{{Events_list[x][1]}}</td>
+                                <td>{{Events_list[x][2]}}</td>
+                                <td>{{Events_list[x][3]}}</td>
+                                <td>
+                                    <form action="/delete_alarm/{{Events_list[x][0]}}">
+                                        <button class="btn btn-warning" type="submit">Delete</button>
+                                    </form>
+                                </td>
+                            </tr>
+                        {% endfor %}
+                    </table>
+                </div>
+            <div class="col-sm" style="position:relative;  top:40px;">
+                <form action="/" method="POST" class="form-alarms">
+                    <input type="datetime-local" name="event_date" class= "form-control" value = "{{request.form.event_date}}">
+                      <br>
+                      <input type = "text"  name="event_name" class="form-control" value = "{{request.form.event_name}}" placeholder="Event name">
+                      <br>
+                      <input type = "text" name="event_desc" class="form-control" value = "{{request.form.event_desc}}" placeholder="Event description">
+                      <br>
+                      <div class="checkbox mb-3">
+                          <input type="checkbox" name="news" value="news"> Include news?
+                          <input type="checkbox" name="weather" value="weather"> Include weather?
+                          <input type="checkbox" name="repeat" value="repeat"> Repeat Alarm?
+                      </div>
+                      <button class="btn btn-lg btn-primary btn-block" type="submit">Submit</button>
+                </form>
+            </div>
+              <!-- NOTIFICATIONS COLUMN -->
+              <div class="col-sm">
+                    <h3>Notifications:</h3>
+                    <table class="table table-hover">
+                            {% for x in range(notification_list|length) %}
+                                <tr>
+                                    <td>{{notification_list[x][0]}}</td>
+                                    {%if notification_list[x][2][1] == "newslink"%}
+                                        <td><a href={{notification_list[x][2][2]}}>link to news story</a></td>
+                                    {%endif%}
+                                    <td></td>
+                                    <td>
+                                      <div style ="float: right;">
+                                        <form action = "/delete_notification/{{notification_list[x][2][0]}}" method = "POST">
+                                           <button class="btn btn-warning" type = "submit">Delete</button>
+                                        </form>
+                                      </div>
+                                    </td>
+                                </tr>
+                            {% endfor %}
+                    </table>
+                </div>
+            </div>
+    </body>
+</html>

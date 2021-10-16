@@ -1,0 +1,29 @@
+time: 1607079729.6239355 ,type of event :user deleted alarm:  ,description:  helo
+time: 1607079732.3990858 ,type of event :reading event database.... ,description:  
+time: 1607079733.071804 ,type of event :reading event database.... ,description:  
+time: 1607079733.3778732 ,type of event :reading event database.... ,description:  
+time: 1607079734.9969323 ,type of event :user deleted notification.... ,description:    notification id/name:helo
+time: 1607079740.3897595 ,type of event :user submitted data... ,description:  event :helo date :2020-12-05T11:02 description: wefw
+time: 1607079740.3907595 ,type of event :setting a alarm.... ,description:  alarm name: helo
+time: 1607079740.39376 ,type of event :wrtiting to event database..... ,description:  
+time: 1607079740.395761 ,type of event :voice message:  ,description:  say helohas been added to upcomming alarms
+time: 1607079756.3077505 ,type of event :reading event database.... ,description:  
+time: 1607079756.5938144 ,type of event :reading event database.... ,description:  
+time: 1607079756.996173 ,type of event :reading event database.... ,description:  
+time: 1607081240.3313916 ,type of event :reading event database.... ,description:  
+time: 1607081240.9842765 ,type of event :reading event database.... ,description:  
+time: 1607081396.5755253 ,type of event :reading event database.... ,description:  
+time: 1607081910.5782642 ,type of event :reading event database.... ,description:  
+time: 1607081937.311386 ,type of event :reading event database.... ,description:  
+time: 1607081937.9876661 ,type of event :reading event database.... ,description:  
+time: 1607081944.0627186 ,type of event :user deleted alarm:  ,description:  helo
+time: 1607081944.0637183 ,type of event :rescheduling alarm for next day.... ,description:  
+time: 1607081944.0657194 ,type of event :removing alarm.... ,description:  
+time: 1607081944.0657194 ,type of event :voice message:  ,description:  say helohas expired or been removed
+time: 1607081946.8967407 ,type of event :wrtiting to event database..... ,description:  
+time: 1607081948.8337178 ,type of event :user deleted notification.... ,description:    notification id/name:helo
+time: 1607082483.7527757 ,type of event :reading event database.... ,description:  
+time: 1607082672.1848805 ,type of event :reading event database.... ,description:  
+time: 1607082672.849248 ,type of event :reading event database.... ,description:  
+time: 1607082702.4463637 ,type of event :reading event database.... ,description:  
+time: 1607082702.720055 ,type of event :reading event database.... ,description:  
